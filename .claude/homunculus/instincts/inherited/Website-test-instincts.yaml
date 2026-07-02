@@ -1,0 +1,393 @@
+# Instincts generated from https://github.com/aloumarbasem-afk/Website-test
+# Generated: 2026-07-02T16:29:33.580Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: Website-test-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/aloumarbasem-afk/Website-test
+---
+
+# Website Test Commit Length
+
+## Action
+
+Write moderate-length commit messages (~72 characters)
+
+## Evidence
+
+- Average commit message length: 72 chars
+- Based on 3 commits
+
+---
+id: Website-test-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/aloumarbasem-afk/Website-test
+---
+
+# Website Test Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: Website-test-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/aloumarbasem-afk/Website-test
+---
+
+# Website Test Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: Website-test-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/aloumarbasem-afk/Website-test
+---
+
+# Website Test Export Style
+
+## Action
+
+Prefer default exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: default
+
+---
+id: Website-test-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/aloumarbasem-afk/Website-test
+---
+
+# Website Test Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: Website-test-workflow-update-documentation-and-config
+trigger: "when doing update documentation and config"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/aloumarbasem-afk/Website-test
+---
+
+# Website Test Workflow Update Documentation And Config
+
+## Action
+
+Follow the update-documentation-and-config workflow:
+1. Edit or add details in README.md to reflect changes.
+2. Update or add environment example files (.env.example) as needed.
+3. Modify deployment configuration files (e.g., vercel.json).
+4. Update or add LICENSE file if licensing changes.
+5. Adjust package.json for engines or metadata.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md, .env.example, vercel.json
+
+---
+id: Website-test-workflow-feature-development-with-component-expansion
+trigger: "when doing feature development with component expansion"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/aloumarbasem-afk/Website-test
+---
+
+# Website Test Workflow Feature Development With Component Expansion
+
+## Action
+
+Follow the feature-development-with-component-expansion workflow:
+1. Create or update multiple component files in components/.
+2. Edit global styles (app/globals.css) as needed.
+3. Update layout or page files (app/layout.js, app/page.js) to integrate new components.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: components/*.js, app/globals.css, app/layout.js
+
+---
+id: website-test-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct File Naming
+
+## Action
+
+Use PascalCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Seen in components/ folder
+
+---
+id: website-test-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- Seen in components/*.js
+
+---
+id: website-test-instinct-class-naming
+trigger: "When creating a class"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+- Seen in components/*.js
+
+---
+id: website-test-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: website-test-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Import Style
+
+## Action
+
+Use alias import style
+
+## Evidence
+
+- Pattern in importStyle
+- Seen in components/*.js
+
+---
+id: website-test-instinct-export-style
+trigger: "When exporting modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Export Style
+
+## Action
+
+Use default export style
+
+## Evidence
+
+- Pattern in exportStyle
+- Seen in components/*.js
+
+---
+id: website-test-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from src
+
+## Evidence
+
+- Pattern in architecture.testLocation
+
+---
+id: website-test-instinct-test-file-naming
+trigger: "When naming a test file"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Test File Naming
+
+## Action
+
+Use the same base name as the source file, with a test-specific suffix
+
+## Evidence
+
+- Pattern in architecture.testLocation
+- Common convention for separate test folders
+
+---
+id: website-test-instinct-commit-format-freeform
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Commit Format Freeform
+
+## Action
+
+Use a concise, imperative, freeform message without a prefix
+
+## Evidence
+
+- Pattern in commits.type: freeform
+- Seen in commit examples: 'Add deployment config and documentation'
+
+---
+id: website-test-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Commit Length
+
+## Action
+
+Keep commit messages around 70-80 characters
+
+## Evidence
+
+- Pattern in commits.averageLength: 72
+
+---
+id: website-test-instinct-update-docs-config
+trigger: "When new features are added or review feedback impacts documentation or deployment setup"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Update Docs Config
+
+## Action
+
+Update README.md, .env.example, vercel.json, LICENSE, and package.json as needed
+
+## Evidence
+
+- Workflow: update-documentation-and-config
+- Seen in commits: 'Add deployment config and documentation'
+
+---
+id: website-test-instinct-feature-component-expansion
+trigger: "When developing a new landing page section or major UI feature"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: aloumarbasem-afk/Website-test
+---
+
+# Website Test Instinct Feature Component Expansion
+
+## Action
+
+Create or update components in components/, edit app/globals.css, and update app/layout.js or app/page.js
+
+## Evidence
+
+- Workflow: feature-development-with-component-expansion
+- Seen in commits: 'Elevate landing page: mouse-reactive particles, spotlight, live chart, stats, testimonials, FAQ'
+

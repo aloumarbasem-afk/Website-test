@@ -161,10 +161,15 @@ export default function Home() {
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <Logo />
             <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms</a>
-              <a href="#" className="hover:text-white transition-colors">Security</a>
-              <a href="#" className="hover:text-white transition-colors">Contact</a>
+              {['Privacy', 'Terms', 'Security', 'Contact'].map((label) => (
+                <button
+                  key={label}
+                  type="button"
+                  className="hover:text-white transition-colors cursor-pointer bg-transparent"
+                >
+                  {label}
+                </button>
+              ))}
             </div>
             <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} Nexus Analytics

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const containerVariants = {
@@ -49,6 +49,7 @@ function LiveChart() {
 }
 
 export default function HeroSection() {
+  const reduce = useReducedMotion();
   return (
     <section className="min-h-screen flex items-center justify-center px-4 pt-28 pb-20 relative z-10">
       <div className="max-w-6xl w-full">
@@ -117,14 +118,22 @@ export default function HeroSection() {
           >
             <motion.div
               className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent-light/20 rounded-2xl blur-3xl"
-              animate={{ scale: [1, 1.1, 1], opacity: [0.7, 1, 0.7] }}
-              transition={{ duration: 5, repeat: Infinity }}
+              animate={
+                reduce
+                  ? { scale: 1, opacity: 0.85 }
+                  : { scale: [1, 1.1, 1], opacity: [0.7, 1, 0.7] }
+              }
+              transition={reduce ? { duration: 0 } : { duration: 5, repeat: Infinity }}
             />
 
             <motion.div
               className="relative w-full max-w-sm glass-effect rounded-2xl p-6 overflow-hidden shadow-2xl"
-              animate={{ y: [0, -16, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              animate={reduce ? { y: 0 } : { y: [0, -16, 0] }}
+              transition={
+                reduce
+                  ? { duration: 0 }
+                  : { duration: 4, repeat: Infinity, ease: 'easeInOut' }
+              }
             >
               <div className="space-y-4">
                 <div className="flex justify-between items-center">

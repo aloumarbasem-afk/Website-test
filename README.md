@@ -24,7 +24,7 @@ A stunning, modern landing page for an AI-powered analytics platform built with 
 ## 📦 Getting Started
 
 ### Prerequisites
-- Node.js 18+
+- Node.js 20.9+ (required by Next.js 16)
 - npm or yarn
 
 ### Installation

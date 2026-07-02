@@ -14,6 +14,7 @@ export default function ParticleBackground() {
     ).matches;
 
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     const setSize = () => {
@@ -127,9 +128,14 @@ export default function ParticleBackground() {
       raf = requestAnimationFrame(render);
     };
 
-    if (prefersReduced) {
-      // Draw a single static frame, no animation loop
+    // Static single frame used for reduced-motion (initial paint + on resize)
+    const drawStaticFrame = () => {
+      ctx.clearRect(0, 0, width(), height());
       particles.forEach((p) => p.draw());
+    };
+
+    if (prefersReduced) {
+      drawStaticFrame();
     } else {
       render();
     }
@@ -144,6 +150,9 @@ export default function ParticleBackground() {
     };
     const onResize = () => {
       setSize();
+      // The animation loop repaints every frame, but the reduced-motion
+      // path draws only once — so re-draw the static frame after a resize.
+      if (prefersReduced) drawStaticFrame();
     };
 
     window.addEventListener('pointermove', onMove);
